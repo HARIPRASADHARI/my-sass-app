@@ -1,0 +1,35 @@
+.container{
+    display: grid;
+    grid-template-columns:50% auto; 
+}
+.col{
+    padding: .4em 1.3em;
+}
+
+.color-dark{
+    background: #2885C4;
+}
+.color-light{
+    background: #57B3F1;
+}
+
+.life-container{
+    background: #0d344e;
+    padding: .5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-container{
+    display: flex;
+  flex-direction: column;
+  &>*{
+    width: 100%;
+  }
+}
+
+.add{
+    background: #57B3F1;
+    display: flex;
+    padding: .5em;
+}

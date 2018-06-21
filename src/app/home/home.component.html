@@ -1,0 +1,32 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Buckets</p>
+  </div>
+  <div class="col">
+    <p>BucketsList({{itemCount}})</p>
+  </div>
+  
+</div>
+
+<div class="container color-light" [@goals]="goals.length">
+  
+  <div class="col">
+    <p class="sm">is simply dummy text of the printing a</p>
+  
+  <form class="form-container">
+    <!-- <mat-form-field class="example-full-width">
+      <input  matInput placeholder="Life Goal" [(ngModel)]="goalText"
+      [ngModelOptions]="{standalone: true}">
+    </mat-form-field> -->
+    
+    <button type="submit" mat-flat-button color="warn"
+    (click)="addItem()"
+    >{{btnText}}</button>
+  
+  </form>
+</div>
+  <div class="col life-container">
+    <p class="sm add" *ngFor="let goal of goals"
+    (click)="removeItem(i)">{{goal}}</p>
+  </div>
+</div>
