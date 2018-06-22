@@ -1,0 +1,14 @@
+<mat-form-field>
+    <input matInput placeholder="Server Name"
+    [(ngModel)]="serverName">
+  </mat-form-field>
+<button mat-flat-button mat-stroked-button color="accent"
+[disabled]="!allowNewServer"
+(click)="onCreateServer()">add server</button>
+<!-- <p>{{serverCreation}}</p> -->
+<p *ngIf="serverCreated;else noServer">Server was created {{serverCreation}}</p>
+<ng-template #noServer>
+	<p>No Server was craeted
+	</p>
+</ng-template>
+<app-server *ngFor="let server of servers"></app-server>

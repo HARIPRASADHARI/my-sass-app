@@ -4,18 +4,23 @@ import{FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialAppModule } from './ngmaterial.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { ServerComponent } from './server/server.component';
+import {ServersComponent} from './servers/servers.component';
+import { WarningAlertComponent } from './warning-alert/warning-alert.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent
+    ServerComponent,
+    WarningAlertComponent,
+    ServersComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, MaterialAppModule, AppRoutingModule
+    BrowserModule, BrowserAnimationsModule, MaterialAppModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
