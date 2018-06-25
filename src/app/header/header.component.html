@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+
+  <span>Recipe Book</span>
+  <a href="#" mat-button>Recipes</a>
+
+  <a href="#" mat-button>Shopping List</a>
+
+   <span class="example-spacer"></span>
+   <mat-menu #appMenu="matMenu">
+  <button mat-menu-item>Saving Data</button>
+  <button mat-menu-item>Fetch Data</button>
+</mat-menu>
+
+<button mat-icon-button [matMenuTriggerFor]="appMenu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+
+</mat-toolbar>
