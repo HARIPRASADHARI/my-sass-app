@@ -1,0 +1,23 @@
+<div fxLayout="row" >
+	<div fxFlex="100">
+		<button mat-button>New Recipe</button>
+	</div>
+</div>
+<div fxLayout="row" >
+	<div fxFlex="100">
+		<mat-card *ngFor="let recipe of recipes">
+			<a href="">
+		  	<div fxLayout="row">
+		  		<div fxFlex="75">
+		  			<h4>{{recipe.name}}</h4>
+		     		<p>{{recipe.description}}</p>
+		  		</div>
+		  		<div fxFlex="25">
+		  			<img [src]="recipe.imagePath"  alt="{{recipe.name}}" style="max-height:75px"/>
+		  		</div>
+		  	</div>
+		  </a>
+    	</mat-card>
+		<app-recipe-item></app-recipe-item>
+	</div>
+</div>
