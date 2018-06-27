@@ -5,6 +5,11 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject'
   providedIn: 'root'
 })
 export class DataService {
-
+  private goals = new BehaviorSubject<any>([
+  'osjokok','ojdnkjnjknkj','kjkjhkj']);
+  goal = this.goals.asObservable();
   constructor() { }
+  changeGoal(goal){
+    this.goals.next(goal);
+  }
 }
